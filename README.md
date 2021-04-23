@@ -24,20 +24,14 @@ IOTPay-Android is a sdk called in merchant app to collect consumer's credit/debi
 
 ```java
 repositories {
-
 	flatDir {
-
 		dirs 'libs'
-
    	}
-
 }
 
 
 dependencies {
-
    ...
-
 	compile(name:'IOTPayAndroidCredit-release',ext:'aar')
    ...
 }
@@ -46,8 +40,9 @@ dependencies {
 
 ## Step 2: Setup View
 Embed IOTPay credit entry GUI into a ViewGroup in your app.
-
+```java
 IOTCardInfoView IOTCardInfoView(ViewGroup viewGroup, int creditCardStyle)
+```
 
 
 - creditCardStyle:
