@@ -5,7 +5,8 @@
 
 IOTPay-Android is a sdk called in merchant app to collect consumer's credit/debit card information.
 <br /> 
-1 Embed a credit entry GUI into collect consumer’s credit/debit card information:
+[For the whole business picture please refer the 'Event Flow and Options' part](https://github.com/IOTPaySDK/IOTPay-iOS/blob/main/README.md)<br /> <br />
+1 Embed a credit entry GUI into a ViewGroup to collect consumer’s credit/debit card information:
 <br /> card number, holder name, expiry date, CVV/CVC
 <br /> 
 2 provide add card, payment methods
@@ -90,7 +91,8 @@ IOTPayService.sendRequest(String secureId, Object layoutType, IOTCardInfoView cr
 
 (2.1) pay:
 
- //Make sure secureID for payment has been retrieved from context
+ Make sure secureID for payment has been retrieved from context<br />
+ [For the whole business picture please refer the 'Event Flow and Options' part](https://github.com/IOTPaySDK/IOTPay-iOS/blob/main/README.md)<br /> 
 ```java
  try{
 IOTPayService.sendRequest(secureId,IOTPayConfig.OneTimePayment, iotCardInfoView,new IOTPayCallback(){
@@ -105,7 +107,8 @@ IOTPayService.sendRequest(secureId,IOTPayConfig.OneTimePayment, iotCardInfoView,
 
 (2.2) Add card: binding the card to a consumer
 
-  //Make sure secureID for card adding has been retrieved from context
+  Make sure secureID for payment has been retrieved from context<br />
+ [For the whole business picture please refer the 'Event Flow and Options' part](https://github.com/IOTPaySDK/IOTPay-iOS/blob/main/README.md)<br /> 
 ```java
   try{
 IOTPayService.sendRequest(secureId,IOTPayConfig.AddCard,iotCardInfoView,new IOTPayCallback(){
@@ -118,3 +121,5 @@ IOTPayService.sendRequest(secureId,IOTPayConfig.AddCard,iotCardInfoView,new IOTP
   }
 ```
 
+#Reference: 
+[How to get SecureID](https://github.com/IOTPaySDK/IOTPay-iOS/blob/main/README.md)
