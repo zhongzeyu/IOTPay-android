@@ -83,7 +83,7 @@ IOTPayService.sendRequest(String secureId, Object layoutType, IOTCardInfoView cr
 
 - layoutType:
 ```java
-  IOTPayConfig.OneTimePayment  
+  IOTPayConfig.SimplePurchase 
   IOTPayConfig.AddCard
 ```
 
@@ -95,7 +95,7 @@ IOTPayService.sendRequest(String secureId, Object layoutType, IOTCardInfoView cr
  [For the whole business picture please refer the 'Event Flow and Options' part](https://github.com/IOTPaySDK/IOTPay-iOS/blob/main/README.md)<br /> 
 ```java
  try{
-IOTPayService.sendRequest(secureId,IOTPayConfig.OneTimePayment, iotCardInfoView,new IOTPayCallback(){
+IOTPayService.sendRequest(secureId,IOTPayConfig.SimplePurchase, iotCardInfoView,new IOTPayCallback(){
         public void onResultIOTPay(String result) {
             //please process result in your own way, ex: showMsg("Payment Result:" + result);
         }
