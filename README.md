@@ -116,7 +116,9 @@ IOTPayService.sendRequest(secureId,IOTPayConfig.AddCard,iotCardInfoView,new IOTP
           //please process result in your own way, ex: showMsg("Payment Result:" + result);
 	  // if retCode is not SUCCESS, go to failed page
           // if result.retData.status in(2,3), go to success page
-	  // else, it means order status unknown, please robin call your server for order status, and your server query order status from IOTPay server. If the robin call over many seconds(Ex, over 30 secs) and the order status remains unknow, please involve support team to check the order status.
+	  // else, it means order status unknown, please robin call your server for order status, and your server query order status
+	  //    from IOTPay server. If the robin call over many seconds(Ex, over 30 secs) and the order status remains unknow, please
+	  //    involve support team to check the order status.
         }
       });
    }catch (Exception e){
